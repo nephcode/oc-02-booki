@@ -1,0 +1,100 @@
+.main-container{
+    background-color: aquamarine;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*=============== B°_°kI =============================================================*/
+/* HEADER ===================================================== OC FULLSTACK =========*/
+/*====================================================================================*/
+
+header{
+    background-color: aqua;
+}
+
+
+#filter a{
+padding: 1rem 2rem;
+color: black;
+text-decoration: none;
+border-color: #F2F2F2;
+border-radius: 25px;
+border-style: solid;
+font-weight: bold;
+}
+
+
+#filter a:focus{
+    background-color:  #DEEBFF;
+}
+
+
+
+/*=============== B°_°kI =============================================================*/
+/* MAIN ===================================================== OC FULLSTACK ===========*/
+/*====================================================================================*/
+
+.hebergements-and-populaires{
+    display: flex;
+    flex: 60% 1 ;
+}
+
+#hebergements , #populaires {
+    background-color: var(--background-second);
+    border-radius: 20px;
+
+}
+
+#hebergements cards{
+
+
+}
+
+#activites article{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+
+background-color: white;
+border-radius: 20px;
+
+
+}
+
+
+
+
+
+/*=============== B°_°kI =================== CICADA 3301 =============== A GAME ======*/
+/* FOOTER ===================================================== DID FULLSTACK ========*/
+/*====================================================================================*/
+
+footer{
+    width: 90%;
+    margin:  auto;
+    display: flex;
+    gap: 2vw;
+    flex-flow: 1 ;
+    background-color: var(--background-second);
+}
+
+footer h3{
+    margin-bottom: 0;
+}
+
+footer ul {
+    padding: 0;
+    
+    align-items: center;
+    align-content: center;
+
+}
+footer ul li{
+    list-style: none;
+    flex-flow: 1 1;
+  
+}
+
+/*=====================================================================================*/
+/* FORMS ========================================================== OC 2023 ===========*/
+/*===================================================================== by Nepha ======*/
