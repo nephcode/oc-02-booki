@@ -12,20 +12,26 @@ header{
     background-color: aqua;
 }
 
+filter h3{
+    display: inline-block;
+}
 
 #filter a{
 padding: 1rem 2rem;
+margin-left: 10px;
 color: black;
+background-color: white;
 text-decoration: none;
 border-color: #F2F2F2;
-border-radius: 25px;
+border-radius: 30px;
 border-style: solid;
 font-weight: bold;
+font-size: 1.1rem;
 }
 
 
-#filter a:focus{
-    background-color:  #DEEBFF;
+#filter a:hover{
+    background-color: var(--second);
 }
 
 
@@ -42,12 +48,14 @@ font-weight: bold;
 #hebergements , #populaires {
     background-color: var(--background-second);
     border-radius: 20px;
-
+    max-width: 40%;
+    gap: 2vw;
 }
 
 #hebergements cards{
 
-
+display: flex;
+flex-wrap: wrap;
 }
 
 #activites article{
@@ -98,3 +106,35 @@ footer ul li{
 /*=====================================================================================*/
 /* FORMS ========================================================== OC 2023 ===========*/
 /*===================================================================== by Nepha ======*/
+
+#search .fa-location-dot {
+padding: 12px 12px;
+color: black;
+background-color: var(--background-second);
+border: 2px solid var(--background-second);
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px ;
+
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    padding: 12px 10px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px ;
+    border: 0px;
+} 
+
+input[type=text] {
+    border: none;
+    border-bottom : 2px solid var(--background-second);
+    border-top : 2px solid var(--background-second);
+    padding: 10px 10px;
+}
+
+input[type=text]::placeholder {
+   color: black;
+   font-weight: bold;
+   font-size: 1.1rem;
+}
