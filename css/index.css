@@ -1,5 +1,9 @@
+html{
+    background-color: aqua;
+}
+
 .main-container{
-    background-color: aquamarine;
+    background-color: white;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -9,8 +13,49 @@
 /*====================================================================================*/
 
 header{
-    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    margin: auto;
 }
+
+#logo{
+    padding: 5px 5px 5px 0px;
+}
+
+#nav-header{
+  
+    width:max-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nav-header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+#nav-header ul li{
+    display: inherit;
+    justify-items: center;
+    align-items: center;
+    padding: auto 2px;
+}
+
+#nav-header ul li a{
+    padding: 0.6rem;
+    color: black;
+    text-decoration: none;
+    border-top: solid 2px transparent;
+}
+
+#nav-header ul li a:hover{
+    color:var(--primary);
+    border-top: solid 2px var(--primary);
+}
+
 
 filter h3{
     display: inline-block;
@@ -39,10 +84,32 @@ font-size: 1.1rem;
 /*=============== B°_°kI =============================================================*/
 /* MAIN ===================================================== OC FULLSTACK ===========*/
 /*====================================================================================*/
+main{
+    max-width: 95%;
+    margin: auto;
+}
+
+#filter{
+    margin-top: 1vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
 
 .hebergements-and-populaires{
+   --min-host:10ch;
+   --gap-host:1rem;
+   
     display: flex;
-    flex: 60% 1 ;
+    flex-wrap: wrap;
+    gap: var(--gap-host);
+}
+
+.hebergements-and-populaires > * {
+    flex: 1 1 var(--min-host);
 }
 
 #hebergements , #populaires {
@@ -53,16 +120,16 @@ font-size: 1.1rem;
 }
 
 #hebergements cards{
-
 display: flex;
 flex-wrap: wrap;
+max-width: 120px;
 }
 
 #activites article{
 display: flex;
 flex-direction: column;
+gap: 5px;
 flex-wrap: wrap;
-
 background-color: white;
 border-radius: 20px;
 
@@ -78,7 +145,7 @@ border-radius: 20px;
 /*====================================================================================*/
 
 footer{
-    width: 90%;
+    max-width: 95%;
     margin:  auto;
     display: flex;
     gap: 2vw;
@@ -106,35 +173,40 @@ footer ul li{
 /*=====================================================================================*/
 /* FORMS ========================================================== OC 2023 ===========*/
 /*===================================================================== by Nepha ======*/
+search{
+    margin: 1rch auto;
+}
 
 #search .fa-location-dot {
-padding: 12px 12px;
+box-sizing: content-box;
 color: black;
 background-color: var(--background-second);
 border: 2px solid var(--background-second);
 border-top-left-radius: 15px;
 border-bottom-left-radius: 15px ;
-
 }
 
 button {
     background-color: var(--primary);
     color: white;
+    font-weight: bold;
+    font-size: 1.0rem;
     padding: 12px 10px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px ;
     border: 0px;
 } 
 
-input[type=text] {
+input[type=text] {   
     border: none;
-    border-bottom : 2px solid var(--background-second);
-    border-top : 2px solid var(--background-second);
-    padding: 10px 10px;
+    border-bottom : 1px solid var(--background-second);
+    border-top : 1px solid var(--background-second);
+    padding:  1.1ch; /* That's great hack girl */
+
 }
 
 input[type=text]::placeholder {
    color: black;
    font-weight: bold;
-   font-size: 1.1rem;
+   font-size: 1.0rem;
 }
