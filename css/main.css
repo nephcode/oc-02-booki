@@ -4,14 +4,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap');
 
 /*====================================================================================*/
+/* HOW TO KNOW NEPH ==================================================================*/
+/*========================================================== FOR THE TEAM by NEPHA ===*/
+/*
+Opérateur ' ' (espace) tous les élements indiqués dans la cible 
+Exemple : ```div p````
+
+Opérateur '>' (chevron) tous les enfants directs dans la cible
+Exemple : ```div > p```soit les enfants `p`de `div``
+
+Opérateur '+' (plus) uniquement l'élément suivant le premier
+Exemple : ```div + p``` Cible l'élément après le div et non dans le div
+
+Opérateur '~' (tilde option+n) Cible tous les suivants le premier
+Exemple : ```div ~ p``` Cibles tous les éléments après le div
+
+Opérateur '[]' (square bracket pour les humains) Cible l'élement avec l'attribut
+Exemple ```input[type="text"] tous les éléments contenant l'attribut cible
+
+Opérateur `*` (Joker) tous les éléments possible dans la règle
+Exemple : ```div + *```soit nimporte quel éléments à la suite de div 
+
+
+
+*/
+/*====================================================================================*/
 /* VARIABLES =========================================================================*/
 /*====================================================================================*/
 :root {
     --primary: #0065FC;
     --second : #DEEBFF;
     --background-primary : #D9D9D9;
-    /*--background-second: #F2F2F2;*/
-    --background-second: red;
+    --background-second: #F2F2F2;
+    /*--background-second: red;*/
   }
 
 /*====================================================================================*/

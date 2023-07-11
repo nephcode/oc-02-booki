@@ -57,11 +57,26 @@ header{
 }
 
 
-filter h3{
+/*=============== B°_°kI =============================================================*/
+/* MAIN ===================================================== OC FULLSTACK ===========*/
+/*====================================================================================*/
+main{
+    max-width: 95%;
+    margin: auto;
+}
+
+#filter{
+    margin-top: 3vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#filter h3{
     display: inline-block;
 }
 
-#filter a{
+#filter nav > a{
 padding: 1rem 2rem;
 margin-left: 10px;
 color: black;
@@ -74,30 +89,9 @@ font-weight: bold;
 font-size: 1.1rem;
 }
 
-
-#filter a:hover{
+#filter nav > a:hover{
     background-color: var(--second);
 }
-
-
-
-/*=============== B°_°kI =============================================================*/
-/* MAIN ===================================================== OC FULLSTACK ===========*/
-/*====================================================================================*/
-main{
-    max-width: 95%;
-    margin: auto;
-}
-
-#filter{
-    margin-top: 1vh;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-
-
 
 .hebergements-and-populaires{
    --min-host:10ch;
@@ -157,14 +151,14 @@ footer h3{
     margin-bottom: 0;
 }
 
-footer ul {
+footer nav ul {
     padding: 0;
     
     align-items: center;
     align-content: center;
 
 }
-footer ul li{
+footer nav ul > li{
     list-style: none;
     flex-flow: 1 1;
   
@@ -175,33 +169,38 @@ footer ul li{
 /*===================================================================== by Nepha ======*/
 search{
     margin: 1rch auto;
+    max-height: 42px;
 }
 
 #search .fa-location-dot {
-box-sizing: content-box;
 color: black;
+box-sizing: content-box;
+size: 20px;
 background-color: var(--background-second);
-border: 2px solid var(--background-second);
+/*border: 2px solid var(--background-second);*/
 border-top-left-radius: 15px;
 border-bottom-left-radius: 15px ;
+padding: 12px 15px 13px; 
 }
 
 button {
     background-color: var(--primary);
     color: white;
+    max-height: 42px;
     font-weight: bold;
     font-size: 1.0rem;
-    padding: 12px 10px;
+    padding: 11px 10px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px ;
     border: 0px;
 } 
 
 input[type=text] {   
+    max-height: 42px;
     border: none;
     border-bottom : 1px solid var(--background-second);
     border-top : 1px solid var(--background-second);
-    padding:  1.1ch; /* That's great hack girl */
+    padding:  10px; /* That's great hack girl */
 
 }
 

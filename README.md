@@ -11,8 +11,16 @@ Hey girls, that's nephacode. So, this is the project 2 but it's really the first
 3. css with all behaviors (focus, responsive...)
 
 
-
-
+## Validation 
+TEST | COMMENT
+---|---
+HTML W3C Checker | Full OK 100% (that green girl) 
+CSS W3C | **TO DO**
+CHROMIUM | Dev with Brave
+FIREFOX | **TO DO**
+RESPONSIVE DESKTOP | OK
+RESPONSIVE TABLET | 45%
+RESPONSIVE MOBILE | **TO DO**  
 
 ![FooterNephcodePublic](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/nephcode-public/githubReadmeSkills.png)
 *By Nephacode - OpenClassrooms Project 2 - Booki, pure html css code - React Dev Stack
