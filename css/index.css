@@ -93,44 +93,78 @@ font-size: 1.1rem;
     background-color: var(--second);
 }
 
-.hebergements-and-populaires{
+#hebergements-and-populaires{
    --min-host:10ch;
    --gap-host:1rem;
    
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: var(--gap-host);
 }
 
-.hebergements-and-populaires > * {
-    flex: 1 1 var(--min-host);
-}
 
 #hebergements , #populaires {
     background-color: var(--background-second);
     border-radius: 20px;
-    max-width: 40%;
+    padding: 20px;
     gap: 2vw;
 }
 
-#hebergements cards{
-display: flex;
-flex-wrap: wrap;
-max-width: 120px;
+#hebergements{
+    display: flex;
+    width: 60%;
 }
 
-#activites article{
-display: flex;
-flex-direction: column;
-gap: 5px;
-flex-wrap: wrap;
-background-color: white;
-border-radius: 20px;
-
-
+#hebergements  h2{
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    width: 100%;
 }
 
 
+#populaires{
+
+}
+
+.populaires-title  {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.populaires-title > * {
+    display: flex;
+   
+}
+
+#activites {
+    display: flex;
+    width: 100%;
+}
+
+article {
+    max-width: 250px;
+}
+
+
+/*====================================================================================*/
+/* CARD ==============================================================================*/
+/*====================================================================================*/
+.card {
+    --img-ratio: auto 750 / 500;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
+    border-radius: 0.5rem;
+}
+    
+.card > img {
+    aspect-ratio: var(--img-ratio);
+    object-fit: cover;
+    width: 100%;
+ }
 
 
 

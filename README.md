@@ -14,7 +14,7 @@ Hey girls, that's nephacode. So, this is the project 2 but it's really the first
 ## Validation 
 TEST | COMMENT
 ---|---
-HTML W3C Checker | Full OK 100% (that green girl) 
+HTML W3C Checker | Full OK 100% (that green girl) Document checking completed. No errors or warnings to show.
 CSS W3C | **TO DO**
 CHROMIUM | Dev with Brave
 FIREFOX | **TO DO**

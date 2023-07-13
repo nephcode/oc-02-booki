@@ -25,8 +25,6 @@ Exemple ```input[type="text"] tous les éléments contenant l'attribut cible
 Opérateur `*` (Joker) tous les éléments possible dans la règle
 Exemple : ```div + *```soit nimporte quel éléments à la suite de div 
 
-
-
 */
 /*====================================================================================*/
 /* VARIABLES =========================================================================*/
@@ -61,7 +59,6 @@ margin: 0;
 }
 
 h1{
-
     font-size: 1.2rem;
 }
 
@@ -77,25 +74,5 @@ h1{
     color:#F2F2F2;
 }
 
-/*====================================================================================*/
-/* CARD ==============================================================================*/
-/*====================================================================================*/
 
-.card {
-width: 120px;
-  --img-ratio: 2/3;
-  display: flex;
-  flex-flow: row wrap;
-  /* Supported for flexbox in modern browsers since April 2021 */
-  gap: 1rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
-  border-radius: 0.5rem;
-    
-    }
-
-.card > img {
-    aspect-ratio: var(--img-ratio);
-    object-fit: cover;
-    width: 100%;
-}
     
