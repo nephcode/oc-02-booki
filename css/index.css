@@ -1,245 +1,233 @@
-html{
-    background-color: aqua;
+html {
+  background-color: aqua;
 }
 
-.main-container{
-    background-color: white;
-    max-width: 1440px;
-    margin: 0 auto;
+.main-container {
+  background-color: white;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /*=============== B°_°kI =============================================================*/
 /* HEADER ===================================================== OC FULLSTACK =========*/
 /*====================================================================================*/
 
-header{
-    display: flex;
-    justify-content: space-between;
-    max-width: 95%;
-    margin: auto;
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
+  margin: auto;
 }
 
-#logo{
-    padding: 5px 5px 5px 0px;
+#logo {
+  padding: 5px 5px 5px 0px;
 }
 
-#nav-header{
-  
-    width:max-content;
-    display: flex;
-    flex-wrap: wrap;
+#nav-header {
+  width: max-content;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #nav-header ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-#nav-header ul li{
-    display: inherit;
-    justify-items: center;
-    align-items: center;
-    padding: auto 2px;
-}
-
-#nav-header ul li a{
-    padding: 0.6rem;
-    color: black;
-    text-decoration: none;
-    border-top: solid 2px transparent;
+#nav-header ul li {
+  display: inherit;
+  justify-items: center;
+  align-items: center;
+  padding: auto 2px;
 }
 
-#nav-header ul li a:hover{
-    color:var(--primary);
-    border-top: solid 2px var(--primary);
+#nav-header ul li a {
+  padding: 0.6rem;
+  color: black;
+  text-decoration: none;
+  border-top: solid 2px transparent;
 }
 
+#nav-header ul li a:hover {
+  color: var(--primary);
+  border-top: solid 2px var(--primary);
+}
 
 /*=============== B°_°kI =============================================================*/
 /* MAIN ===================================================== OC FULLSTACK ===========*/
 /*====================================================================================*/
-main{
-    max-width: 95%;
-    margin: auto;
+main {
+  max-width: 95%;
+  margin: auto;
 }
 
-#filter{
-    margin-top: 3vh;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+#filter {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
-#filter h3{
-    display: inline-block;
+#filter h3 {
+  display: inline-block;
 }
 
-#filter nav > a{
-padding: 1rem 2rem;
-margin-left: 10px;
-color: black;
-background-color: white;
-text-decoration: none;
-border-color: #F2F2F2;
-border-radius: 30px;
-border-style: solid;
-font-weight: bold;
-font-size: 1.1rem;
+#filter nav > a {
+  padding: 1rem 2rem;
+  margin-left: 10px;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border-color: #f2f2f2;
+  border-radius: 30px;
+  border-style: solid;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
-#filter nav > a:hover{
-    background-color: var(--second);
+#filter nav > a:hover {
+  background-color: var(--second);
 }
 
-#hebergements-and-populaires{
-   --min-host:10ch;
-   --gap-host:1rem;
-   
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: var(--gap-host);
+#hebergements-and-populaires {
+  --min-host: 10ch;
+  --gap-host: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--gap-host);
 }
 
-
-#hebergements , #populaires {
-    background-color: var(--background-second);
-    border-radius: 20px;
-    padding: 20px;
-    gap: 2vw;
+#hebergements,
+#populaires {
+  background-color: var(--background-second);
+  border-radius: 20px;
+  padding: 20px;
+  gap: 2vw;
 }
 
-#hebergements{
-    display: flex;
-    width: 60%;
+#hebergements {
+  display: flex;
+  width: 60%;
 }
 
-#hebergements  h2{
-    display: flex;
-    align-items: baseline;
-    justify-content: left;
-    width: 100%;
+#hebergements h2 {
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  width: 100%;
 }
 
-
-#populaires{
-
+#populaires {
 }
 
-.populaires-title  {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+.populaires-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .populaires-title > * {
-    display: flex;
-   
+  display: flex;
 }
 
 #activites {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 article {
-    max-width: 250px;
+  max-width: 250px;
 }
-
 
 /*====================================================================================*/
 /* CARD ==============================================================================*/
 /*====================================================================================*/
 .card {
-    --img-ratio: auto 750 / 500;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
-    border-radius: 0.5rem;
+  --img-ratio: auto 750 / 500;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
+  border-radius: 0.5rem;
 }
-    
+
 .card > img {
-    aspect-ratio: var(--img-ratio);
-    object-fit: cover;
-    width: 100%;
- }
-
-
+  aspect-ratio: var(--img-ratio);
+  object-fit: cover;
+  width: 100%;
+}
 
 /*=============== B°_°kI =================== CICADA 3301 =============== A GAME ======*/
 /* FOOTER ===================================================== DID FULLSTACK ========*/
 /*====================================================================================*/
 
-footer{
-    max-width: 95%;
-    margin:  auto;
-    display: flex;
-    gap: 2vw;
-    flex-flow: 1 ;
-    background-color: var(--background-second);
+footer {
+  max-width: 95%;
+  margin: auto;
+  display: flex;
+  gap: 2vw;
+  flex-flow: 1;
+  background-color: var(--background-second);
 }
 
-footer h3{
-    margin-bottom: 0;
+footer h3 {
+  margin-bottom: 0;
 }
 
 footer nav ul {
-    padding: 0;
-    
-    align-items: center;
-    align-content: center;
+  padding: 0;
 
+  align-items: center;
+  align-content: center;
 }
-footer nav ul > li{
-    list-style: none;
-    flex-flow: 1 1;
-  
+footer nav ul > li {
+  list-style: none;
+  flex-flow: 1 1;
 }
 
 /*=====================================================================================*/
 /* FORMS ========================================================== OC 2023 ===========*/
 /*===================================================================== by Nepha ======*/
-search{
-    margin: 1rch auto;
-    max-height: 42px;
+search {
+  margin: 1rch auto;
+  max-height: 42px;
 }
 
 #search .fa-location-dot {
-color: black;
-box-sizing: content-box;
-size: 20px;
-background-color: var(--background-second);
-/*border: 2px solid var(--background-second);*/
-border-top-left-radius: 15px;
-border-bottom-left-radius: 15px ;
-padding: 12px 15px 13px; 
+  color: black;
+  box-sizing: content-box;
+  size: 20px;
+  background-color: var(--background-second);
+  /*border: 2px solid var(--background-second);*/
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 12px 15px 13px;
 }
 
 button {
-    background-color: var(--primary);
-    color: white;
-    max-height: 42px;
-    font-weight: bold;
-    font-size: 1.0rem;
-    padding: 11px 10px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px ;
-    border: 0px;
-} 
-
-input[type=text] {   
-    max-height: 42px;
-    border: none;
-    border-bottom : 1px solid var(--background-second);
-    border-top : 1px solid var(--background-second);
-    padding:  10px; /* That's great hack girl */
-
+  background-color: var(--primary);
+  color: white;
+  max-height: 42px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 11px 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 0px;
 }
 
-input[type=text]::placeholder {
-   color: black;
-   font-weight: bold;
-   font-size: 1.0rem;
+input[type="text"] {
+  max-height: 42px;
+  border: none;
+  border-bottom: 1px solid var(--background-second);
+  border-top: 1px solid var(--background-second);
+  padding: 10px; /* That's great hack girl */
+}
+
+input[type="text"]::placeholder {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
 }
