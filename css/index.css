@@ -91,12 +91,13 @@ main {
 }
 
 #hebergements-and-populaires {
+  /* var */
   --min-host: 10ch;
   --gap-host: 1rem;
-
+  /* rules */
   display: flex;
+  flex: 60% auto;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: var(--gap-host);
 }
 
@@ -108,9 +109,13 @@ main {
   gap: 2vw;
 }
 
-#hebergements {
+/* -------------------------------------------------*/
+
+#hebergements > * {
   display: flex;
-  width: 60%;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  gap: 1vw;
 }
 
 #hebergements h2 {
@@ -118,10 +123,17 @@ main {
   align-items: baseline;
   justify-content: left;
   width: 100%;
+  max-height: 26px;
 }
 
-#populaires {
+#hebergements > a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding-top: 1em;
 }
+
+/* -------------------------------------------------*/
 
 .populaires-title {
   display: flex;
@@ -132,31 +144,95 @@ main {
   display: flex;
 }
 
+/* -------------------------------------------------*/
+
 #activites {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  width: 90vw;
+
 }
 
+#activites > div {
+  display: flex;
+  flex: row nowrap;
+  justify-content: space-around;
+}
+
+#activites div article {
+  display: flex;
+  flex-direction: row wrap;
+  width: 100%;
+  align-content: space-between;
+}
+
+/* -------------------------------------------------*/
+
 article {
+  display: flex;
+  flex: row nowrap;
   max-width: 250px;
 }
 
-/*====================================================================================*/
-/* CARD ==============================================================================*/
-/*====================================================================================*/
+/*========================================================== 🥲 ======================*/
+/* CARD ==================================================== -  Not easy =============*/
+/*==================================================== No girl you have a good idea ==*/
 .card {
-  --img-ratio: auto 750 / 500;
+  --img-ratio: 16 / 9;
   display: flex;
   flex-flow: column wrap;
   gap: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
   border-radius: 0.5rem;
+  max-width: 200px;
 }
 
 .card > img {
   aspect-ratio: var(--img-ratio);
   object-fit: cover;
   width: 100%;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  padding: 0.2rem;
+}
+
+.lateral {
+  /* that's really cool css */
+  flex-basis: 370px;
+  max-width: 370px;
+  flex-flow: row nowrap;
+  margin-top: 30px;
+}
+.lateral > img {
+  --img-lateral-ratio: 4 / 5;
+  aspect-ratio: var(--img-lateral-ratio);
+  object-fit: cover;
+  width: 123px;
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  padding: 0.2rem;
+}
+
+.none {
+  width: 297px;
+  gap: 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  justify-content: space-between;
+  /* text hack design girl */
+    /* That so cute 😜 */
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+  font-size: clamp(0.3rem, 0.7rem, 1rem);
+}
+
+.none > img {
+  --img-none-ratio: 9 / 16;
+  aspect-ratio: var(--img-none-ratio);
+  object-fit: cover;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  padding: 0rem;
 }
 
 /*=============== B°_°kI =================== CICADA 3301 =============== A GAME ======*/
@@ -165,24 +241,27 @@ article {
 
 footer {
   max-width: 95%;
-  margin: auto;
+  margin: 1rem auto 0;
   display: flex;
   gap: 2vw;
-  flex-flow: 1;
   background-color: var(--background-second);
+}
+footer nav {
+  display: flex;
+  flex-flow: row;
+  align-items: space-between;
 }
 
 footer h3 {
   margin-bottom: 0;
 }
 
-footer nav ul {
+footer ul {
   padding: 0;
-
   align-items: center;
   align-content: center;
 }
-footer nav ul > li {
+footer ul li {
   list-style: none;
   flex-flow: 1 1;
 }
