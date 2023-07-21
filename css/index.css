@@ -96,7 +96,7 @@ main {
   --gap-host: 1rem;
   /* rules */
   display: flex;
-  flex-direction:row ;
+  flex-direction: row;
   justify-content: space-between;
   gap: var(--gap-host);
 }
@@ -113,6 +113,7 @@ main {
 
 #hebergements > * {
   display: flex;
+  justify-content: space-around;
   flex-flow: row wrap;
   flex-grow: 1;
   gap: 1vw;
@@ -127,6 +128,8 @@ main {
 }
 
 #hebergements > a {
+  display: block;
+  align-self: left;
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -134,12 +137,17 @@ main {
 }
 
 /* -------------------------------------------------*/
-.populaires {
+#populaires {
   display: flex;
-  flex-basis: 1;
-  flex-shrink: 0;
+  flex-direction: column ;
+  row-gap: 2vh;
 }
 
+.pop-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
 
 .populaires-title {
   display: flex;
@@ -186,8 +194,8 @@ article {
   display: flex;
   flex-flow: column wrap;
   gap: 1rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
-  border-radius: 0.5rem;
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius);
   max-width: 300px;
 }
 
@@ -195,39 +203,40 @@ article {
   aspect-ratio: var(--img-ratio);
   object-fit: cover;
   width: 100%;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
   padding: 0.2rem;
 }
 
 .lateral {
   /* that's really cool css */
-  min-width:300px;
-  flex-basis: 370px;
-  max-width: 370px;
+  min-width: 300px;
+  flex-basis: 144px;
+  max-width: 300px;
   flex-flow: row nowrap;
-  margin-top: 30px;
+  gap: 3vh;
+  row-gap: 3vh;;
 }
 .lateral > img {
-  /* var img neph */ 
-    --img-lateral-ratio: 4 / 5;
+  /* var img neph */
+  --img-lateral-ratio: 4 / 5;
   /* rules lateral */
   aspect-ratio: var(--img-lateral-ratio);
   object-fit: cover;
-  width: 123px;
-  border-bottom-left-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
+  width: 125px;
+  border-bottom-left-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: 0rem;
   padding: 0.2rem;
 }
 
 .none {
   width: 300px;
   gap: 1rem;
-  border-top-right-radius: 0.5rem;
-  border-top-left-radius: 0.5rem;
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
   flex-direction: row;
   justify-content: start;
-
 
   /* text hack design girl */
   /* That so cute 😜 */
@@ -291,8 +300,8 @@ footer ul li {
 }
 
 footer a {
-  a:link{
-    color: black
+  a:link {
+    color: black;
   }
 }
 
