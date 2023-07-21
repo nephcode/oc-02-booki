@@ -1,7 +1,7 @@
 /*====================================================================================*/
 /* CSS STYLE by Neph =================================================================*/
 /*==================================================================== Pure CSS ======*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap");
 
 /*====================================================================================*/
 /* HOW TO KNOW NEPH ==================================================================*/
@@ -40,65 +40,71 @@ Exemple : flex-basis : 30vw; 300px...
 1 signifie 'rétrécie' et...
 
 
-Source d'inspiration : https://smolcss.dev/#smol-css-grid
+Source d'inspiration : 
+    https://smolcss.dev/#smol-css-grid
+    https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/
+    
 
-*/ 
-
-
+*/
 
 /*====================================================================================*/
 /* VARIABLES =========================================================================*/
 /*====================================================================================*/
 :root {
-    /* Variables */ 
-    --primary: #0065FC;
-    --second : #DEEBFF;
-    --background-primary : #D9D9D9;
-    --background-second: #F2F2F2;
-    /*--background-second: red;*/
-  }
+  /* Variables */
+  --primary: #0065fc;
+  --second: #deebff;
+  --link : black;
+  --background-primary: #d9d9d9;
+  --background-second: #f2f2f2;
+  /*--background-second: red;*/
+}
 
 /*====================================================================================*/
 /* RESPONSIVE ========================================================================*/
 /*====================================================================================*/
 
-
 /*====================================================================================*/
 /* GLOBAL ============================================================================*/
 /*====================================================================================*/
 
-*{
-    /* Rules */
-    box-sizing: border-box;
-    font-family: raleway;
-    font-size: 1rem;
-    
-
+* {
+  /* Rules */
+  box-sizing: border-box;
+  font-family: raleway;
+  font-size: 1rem;
 }
 
-html, body{
-margin: 0;
-
+html,
+body {
+  margin: 0;
 }
 
-h1{
-    font-size: 1.2rem;
+h1 {
+  font-size: 1.2rem;
 }
 
 /*====================================================================================*/
 /* ELEMENTS ==========================================================================*/
 /*====================================================================================*/
 
-.fa-solid{
-    color: #0065FC;
+.fa-solid {
+  color: #0065fc;
 }
 
-.neutral-star{
-    color:#F2F2F2;
+.neutral-star {
+  color: #f2f2f2;
 }
 
-a:link { color: var(black); }          /* Liens non visités */
-a:visited { color: black; }     /* Liens visités */
-a:hover { background: (var(--primary)); }  /* Liens survolés */
-a:active { color: var(--primary); } 
-    
+a:link {
+  color: var(--link);
+} /* Liens non visités */
+a:visited {
+  color: var(--link);
+} /* Liens visités */
+a:hover {
+  background: (var(--primary));
+} /* Liens survolés */
+a:active {
+  color: var(--primary);
+}

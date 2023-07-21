@@ -96,7 +96,7 @@ main {
   --gap-host: 1rem;
   /* rules */
   display: flex;
-  flex: 60% auto;
+  flex-direction:row ;
   justify-content: space-between;
   gap: var(--gap-host);
 }
@@ -134,6 +134,12 @@ main {
 }
 
 /* -------------------------------------------------*/
+.populaires {
+  display: flex;
+  flex-basis: 1;
+  flex-shrink: 0;
+}
+
 
 .populaires-title {
   display: flex;
@@ -145,25 +151,23 @@ main {
 }
 
 /* -------------------------------------------------*/
+#act {
+  display: flex;
+  justify-content: center;
+}
 
 #activites {
   display: flex;
   flex-direction: column;
-  width: 90vw;
-
+  width: 95%;
+  margin-top: 2rem;
 }
 
 #activites > div {
   display: flex;
   flex: row nowrap;
-  justify-content: space-around;
-}
-
-#activites div article {
-  display: flex;
-  flex-direction: row wrap;
-  width: 100%;
-  align-content: space-between;
+  justify-content: center;
+  gap: 2vw;
 }
 
 /* -------------------------------------------------*/
@@ -171,7 +175,7 @@ main {
 article {
   display: flex;
   flex: row nowrap;
-  max-width: 250px;
+  max-width: 300px;
 }
 
 /*========================================================== 🥲 ======================*/
@@ -184,7 +188,7 @@ article {
   gap: 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
   border-radius: 0.5rem;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .card > img {
@@ -198,13 +202,16 @@ article {
 
 .lateral {
   /* that's really cool css */
+  min-width:300px;
   flex-basis: 370px;
   max-width: 370px;
   flex-flow: row nowrap;
   margin-top: 30px;
 }
 .lateral > img {
-  --img-lateral-ratio: 4 / 5;
+  /* var img neph */ 
+    --img-lateral-ratio: 4 / 5;
+  /* rules lateral */
   aspect-ratio: var(--img-lateral-ratio);
   object-fit: cover;
   width: 123px;
@@ -214,20 +221,23 @@ article {
 }
 
 .none {
-  width: 297px;
+  width: 300px;
   gap: 1rem;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: start;
+
+
   /* text hack design girl */
-    /* That so cute 😜 */
-  white-space: nowrap; 
+  /* That so cute 😜 */
+  white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: clamp(0.3rem, 0.7rem, 1rem);
+  /*font-size: clamp(1vh, 4vh, 10vh);*/
 }
 
 .none > img {
-  --img-none-ratio: 9 / 16;
+  --img-none-ratio: 4 / 5;
   aspect-ratio: var(--img-none-ratio);
   object-fit: cover;
   border-top-right-radius: 0.5rem;
@@ -235,23 +245,38 @@ article {
   padding: 0rem;
 }
 
+.none > h3 {
+  font-size: calc(0.8rem + 0.0618vw);
+  /*font-size: calc(80% +1,618vw);*/
+  margin-left: 10px;
+  margin-top: 0;
+}
+
 /*=============== B°_°kI =================== CICADA 3301 =============== A GAME ======*/
 /* FOOTER ===================================================== DID FULLSTACK ========*/
 /*====================================================================================*/
 
 footer {
-  max-width: 95%;
-  margin: 1rem auto 0;
   display: flex;
+  width: 95%;
+  max-width: 95%;
+  margin: 3vh auto 0;
   gap: 2vw;
   background-color: var(--background-second);
 }
 footer nav {
+  width: inherit;
   display: flex;
   flex-flow: row;
-  align-items: space-between;
+  row-gap: 3vw;
+  justify-content: space-evenly;
 }
+/*
+footer nav > div{
+  width: 300px;
 
+}
+*/
 footer h3 {
   margin-bottom: 0;
 }
@@ -263,7 +288,12 @@ footer ul {
 }
 footer ul li {
   list-style: none;
-  flex-flow: 1 1;
+}
+
+footer a {
+  a:link{
+    color: black
+  }
 }
 
 /*=====================================================================================*/
