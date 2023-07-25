@@ -129,7 +129,7 @@ main {
 
 #hebergements > a {
   display: block;
-  align-self: left;
+  align-self: end;
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -139,11 +139,11 @@ main {
 /* -------------------------------------------------*/
 #populaires {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   row-gap: 2vh;
 }
 
-.pop-cards{
+.pop-cards {
   display: flex;
   flex-direction: column;
   gap: 3vh;
@@ -190,13 +190,14 @@ article {
 /* CARD ==================================================== -  Not easy =============*/
 /*==================================================== No girl you have a good idea ==*/
 .card {
+  font-size: 0.8rem;
   --img-ratio: 16 / 9;
   display: flex;
   flex-flow: column wrap;
   gap: 1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
   border-radius: var(--radius);
-  max-width: 300px;
+  max-width: 200px;
 }
 
 .card > img {
@@ -210,16 +211,17 @@ article {
 
 .lateral {
   /* that's really cool css */
-  min-width: 300px;
   flex-basis: 144px;
-  max-width: 300px;
+  min-width: 350px;
+  max-width: 370px;
   flex-flow: row nowrap;
-  gap: 3vh;
-  row-gap: 3vh;;
+  gap: 15px;
+  row-gap: 15px;
 }
+
 .lateral > img {
   /* var img neph */
-  --img-lateral-ratio: 4 / 5;
+  --img-lateral-ratio: 123 / 144;
   /* rules lateral */
   aspect-ratio: var(--img-lateral-ratio);
   object-fit: cover;
@@ -228,6 +230,21 @@ article {
   border-top-left-radius: var(--radius);
   border-top-right-radius: 0rem;
   padding: 0.2rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0px 10px 0px;
+}
+
+.card-content p {
+  margin: 0;
+}
+
+.card-content h3 {
+  margin: 2px;
 }
 
 .none {
