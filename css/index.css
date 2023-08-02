@@ -236,15 +236,16 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 0px 10px 0px;
+  padding: 0px;
+  /*margin: 2px 0px 2px 2px;*/
 }
 
 .card-content p {
-  margin: 0;
+ padding: 0; 
 }
 
 .card-content h3 {
-  margin: 2px;
+  margin: 0;
 }
 
 .none {
@@ -365,4 +366,56 @@ input[type="text"]::placeholder {
   color: black;
   font-weight: bold;
   font-size: 1rem;
+}
+
+
+
+
+/*=====================================================================================*/
+/*  RESPONSIVE ==================================================== OC 2023 ===========*/
+/*========================================================== by Athena With Neah ======*/
+/* Style pour tablettes */
+@media screen and (max-width: 1024px) {
+  header {
+      background-color: lightgreen;
+
+  }
+  #filter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  #filter h3{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    margin: 0px 0px 30px;
+  }
+
+  #filter nav {
+
+  }
+
+  #filter nav > a{
+    max-width: 100px;
+  }
+
+  #hebergements-and-populaires{
+  flex-direction: column;  
+
+}
+
+
+
+/* Style pour téléphones mobiles */
+@media screen and (max-width: 480px) {
+  header {
+      background-color: rgb(221, 221, 28);
+  }
+
+  #hebergements-and-populaires{
+    flex-direction: column-reverse;  
+  
+  }
 }
