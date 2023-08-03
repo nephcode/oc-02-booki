@@ -4,7 +4,7 @@ html {
 
 .main-container {
   background-color: white;
-  max-width: 1440px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -74,8 +74,16 @@ main {
 }
 
 #filter nav > a {
+  display: inline-flex;
+  flex: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.2rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(165px + 0.0618vw);
   padding: 1rem 2rem;
-  margin-left: 10px;
+  margin: 0.5vh 0.4vw 1vh;
   color: black;
   background-color: white;
   text-decoration: none;
@@ -103,20 +111,25 @@ main {
 
 #hebergements,
 #populaires {
+  display: flex;
   background-color: var(--background-second);
   border-radius: 20px;
   padding: 20px;
-  gap: 2vw;
+  /*gap: 2vw;*/
 }
 
 /* -------------------------------------------------*/
 
+#hebergements {
+  flex-direction: column;
+}
+
 #hebergements > * {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: row wrap;
   flex-grow: 1;
-  gap: 1vw;
+  gap: 2vw;
 }
 
 #hebergements h2 {
@@ -129,7 +142,7 @@ main {
 
 #hebergements > a {
   display: block;
-  align-self: end;
+  align-self: start;
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -141,6 +154,8 @@ main {
   display: flex;
   flex-direction: column;
   row-gap: 2vh;
+  min-width: 420px;
+  flex-shrink: 0;
 }
 
 .pop-cards {
@@ -168,6 +183,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 95%;
+  padding: 20px;
   margin-top: 2rem;
 }
 
@@ -178,13 +194,7 @@ main {
   gap: 2vw;
 }
 
-/* -------------------------------------------------*/
 
-article {
-  display: flex;
-  flex: row nowrap;
-  max-width: 300px;
-}
 
 /*========================================================== 🥲 ======================*/
 /* CARD ==================================================== -  Not easy =============*/
@@ -194,10 +204,11 @@ article {
   --img-ratio: 16 / 9;
   display: flex;
   flex-flow: column wrap;
-  gap: 1rem;
+  flex-basis: 30%;
+  gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
   border-radius: var(--radius);
-  max-width: 200px;
+  /*max-width: 200px;*/
 }
 
 .card > img {
@@ -211,12 +222,9 @@ article {
 
 .lateral {
   /* that's really cool css */
-  flex-basis: 144px;
-  min-width: 350px;
-  max-width: 370px;
+  flex-basis: 100%;
+  width: auto;
   flex-flow: row nowrap;
-  gap: 15px;
-  row-gap: 15px;
 }
 
 .lateral > img {
@@ -237,28 +245,28 @@ article {
   flex-direction: column;
   justify-content: space-between;
   padding: 0px;
-  /*margin: 2px 0px 2px 2px;*/
-}
-
-.card-content p {
- padding: 0; 
+  margin: 2px 0px 5px 10px;
 }
 
 .card-content h3 {
-  margin: 0;
+  margin: 5px 0px;
 }
+
+.card-subtitle {
+  padding: 0;
+ }
 
 .none {
   width: 300px;
   gap: 1rem;
   border-top-right-radius: var(--radius);
   border-top-left-radius: var(--radius);
-  flex-direction: row;
+  /*flex-direction: row;*/
   justify-content: start;
 
   /* text hack design girl */
   /* That so cute 😜 */
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   text-overflow: ellipsis;
   /*font-size: clamp(1vh, 4vh, 10vh);*/
 }
@@ -298,12 +306,7 @@ footer nav {
   row-gap: 3vw;
   justify-content: space-evenly;
 }
-/*
-footer nav > div{
-  width: 300px;
 
-}
-*/
 footer h3 {
   margin-bottom: 0;
 }
@@ -315,6 +318,7 @@ footer ul {
 }
 footer ul li {
   list-style: none;
+  padding-bottom: 1rem;
 }
 
 footer a {
@@ -336,10 +340,10 @@ search {
   box-sizing: content-box;
   size: 20px;
   background-color: var(--background-second);
-  /*border: 2px solid var(--background-second);*/
+  border: 1px solid var(--background-second);
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  padding: 12px 15px 13px;
+  padding: 12px 15px 12px;
 }
 
 button {
@@ -352,6 +356,9 @@ button {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border: 0px;
+}
+.mobile-view {
+  display: none;
 }
 
 input[type="text"] {
@@ -368,54 +375,224 @@ input[type="text"]::placeholder {
   font-size: 1rem;
 }
 
-
-
-
 /*=====================================================================================*/
 /*  RESPONSIVE ==================================================== OC 2023 ===========*/
 /*========================================================== by Athena With Neah ======*/
 /* Style pour tablettes */
 @media screen and (max-width: 1024px) {
   header {
-      background-color: lightgreen;
-
+   /* background-color: lightgreen;*/
   }
   #filter {
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+    align-items: start;
   }
 
-  #filter h3{
+  #filter h3 {
     display: flex;
     width: 100%;
     justify-content: left;
     margin: 0px 0px 30px;
   }
-
-  #filter nav {
-
+  
+   .general-view {
+    display: inline;
+  }
+  .mobile-view {
+    display: none;
   }
 
-  #filter nav > a{
-    max-width: 100px;
+  #hebergements-and-populaires {
+    flex-direction: column;
   }
 
-  #hebergements-and-populaires{
-  flex-direction: column;  
+  .pop-cards {
+    flex-direction: row;
+    }
 
+
+.lateral{
+  min-width: 25%;
+  max-width: none;
+  width: fit-content;
 }
 
-
+  .none {
+    flex-direction: none;
+    white-space: none;
+  }
+}
 
 /* Style pour téléphones mobiles */
 @media screen and (max-width: 480px) {
+  /* ==================================*/
+  /* HEADER MOBILE ====================*/
+  /* ==================================*/
+
   header {
-      background-color: rgb(221, 221, 28);
+  /*  background-color: rgb(221, 221, 28);*/
+    flex-direction: column;
+  }
+  #logo {
+    margin: 10px;
+  }
+  #nav-header {
+    width: 100%;
   }
 
-  #hebergements-and-populaires{
-    flex-direction: column-reverse;  
-  
+  #nav-header ul {
+    width: 100%;
+    justify-items: stretch;
+  }
+
+  #nav-header ul li {
+    display: inherit;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: auto 2px;
+  }
+
+  #nav-header ul li a {
+    border-top: none;
+    border-bottom: solid 2px transparent;
+  }
+
+  #nav-header ul li a:hover {
+    border-top: none;
+    border-bottom: solid 2px var(--primary);
+  }
+
+  #nav-header ul li {
+    width: 50%;
+    align-items: center;
+    justify-items: space-between;
+  }
+
+  #filter-search {
+    max-width: 95%;
+    margin: auto;
+  }
+
+  #filter nav > a {
+    align-content: baseline;
+    flex-basis: 40%;
+    flex-shrink: 1;
+    margin-bottom: 10px;
+  }
+
+  .general-view {
+    display: none;
+  }
+  .mobile-view {
+    display: inline;
+  }
+
+  button {
+    color: white;
+    max-height: 42px;
+    width: 42px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 11px 10px;
+    border-radius: 15px;
+    border: 0px;
+    margin-left: -20px;
+  }
+
+  .fa-magnifying-glass {
+    color: white;
+    box-sizing: content-box;
+    /*border: 2px solid var(--background-second);*/
+    border-radius: 15px;
+  }
+
+  /* ==================================*/
+  /* MAIN MOBILE ======================*/
+  /* ==================================*/
+  main {
+    width: 100%;
+    max-width: none;
+  }
+
+  main > p {
+    max-width: 95%;
+    margin: 5px 5px 10px;
+  }
+  #hebergements-and-populaires {
+    flex-direction: column-reverse;
+    width: none;
+  }
+
+  #populaires {
+    min-width: 100%;
+    max-width: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  #hebergements {
+    background-color: white;
+  }
+  #hebergements > * {
+    gap: 5vw;
+  }
+
+  #hebergements div {
+   flex-direction: column;
+   
+  }
+
+
+  .pop-cards {
+    flex-direction: column;
+    }
+
+  #hebergements .card {
+    max-width: none;
+    gap: 5vw;
+    width: 100%;
+  }
+
+  #activites > div {
+    flex-direction: column;
+    max-width: none;
+    gap: 4vw;
+  }
+
+  .lateral{
+    flex-basis: auto;
+    min-width:100% ;
+  }
+
+  .none {
+    max-width: none;
+    width: 100%;
+  }
+
+  .none img {
+    --img-none-ratio: 21/9;
+  }
+  /* ==================== FINAL DEBUG NEPHELIM ==============*/
+  /* FOOTER MOBILE ==========================================*/
+  /* ===================================== With N. TEAM =====*/
+
+  footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  footer nav {
+    flex-direction: column;
+  }
+
+  footer li {
+    padding-bottom: 1rem;
   }
 }
+/* ==================== FINAL DEBUG NEPHELIM ==============*/
+/* Ce code est claqué au sol tellement c'est le bazar =====*/
+/* ====================================== CSS en PLS ======*/
