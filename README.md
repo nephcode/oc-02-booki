@@ -6,7 +6,7 @@ A pure HTML/CSS project for OpenClassrooms course AKA project 2
 
 ## How to hot code intruction
 
-Hey girls, that's nephacode. So, this is the project 2 but it's really the first with code.
+Hey girls, that's nephAcode. So, this is the project 2 but it's really the first with code.
 
 1. html integration
 2. css without effect (no responsive)
@@ -16,19 +16,19 @@ Hey girls, that's nephacode. So, this is the project 2 but it's really the first
 
 | TEST               | COMMENT                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------ |
-| HTML W3C Checker   | Full OK 100% (that green girl) Document checking completed. No errors or warnings to show. |
-| CSS W3C            | 100% OK                                                                                 |
-| CHROMIUM           | Dev with Brave                                                                             |
-| FIREFOX            | OK (code is run on Firefox Developer Edition)                                              |
-| RESPONSIVE DESKTOP | OK                                                                                         |
-| RESPONSIVE TABLET  | 80%                                                                                        |
-| RESPONSIVE MOBILE  | 60\*                                                                                       |
+| HTML W3C Checker   | **OK** Full OK 100% (that green girl) Document checking completed. No errors or warnings to show. |
+| CSS W3C            | **OK**                                                                                  |
+| CHROMIUM           | **OK** - Test on Brave, Chrome                                                                             |
+| FIREFOX            | **OK** (code is run on Firefox Developer Edition)                                              |
+| RESPONSIVE DESKTOP | **OK** over 1024 with margin at 1280 PX                                                                                        |
+| RESPONSIVE TABLET  | **OK** betwwen 1024 to 768 in PX width                                                                                         |
+| RESPONSIVE MOBILE  | **OK** Under 767 to 320 in PX                                                                                        |
 
 ## Debug Responsive
 
 ### Header
 
-- logo : align & margin
+- Logo : align & margin
 - Nav : Adaptative hover behavior
 
 ### Search & Filtre
@@ -47,6 +47,14 @@ Hey girls, that's nephacode. So, this is the project 2 but it's really the first
 
 - Change flex-direction
 - Spacing Font like model
+
+## Explain the project 
+The is a cool simulation with classic issues (**adaptative strange behaviors**). I thinked the projet for a future component implementation. I use 2 sheet style MAIN and *TEMPLATE (index).
+I tried to use the minimal code in CSS and i keep my HTML code safe from *DIV invasion* 
+I used #ID and Cascade Class.
+I choised Cascade on card to optimize behavoir for responsive and adaptative. 
+Here, the main `.card` and others cascade top change the ratio img system `.lateral` and `.none`. 
+This system can be call by a future app.  
 
 ![FooterNephcodePublic](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/nephcode-public/githubReadmeSkills.png)
 \*By Nephacode - OpenClassrooms Project 2 - Booki, pure html css code - React Dev Stack

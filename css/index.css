@@ -20,34 +20,68 @@ header {
 }
 
 #logo {
-  padding: 5px 5px 5px 0px;
-  margin: 10px;
+  padding: 20px 5px 30px 0px;
 }
-
+/*
 #nav-header {
-  width: max-content;
+  width: 20vw;
   display: flex;
   flex-wrap: wrap;
+  align-items: start;
 }
 
 #nav-header ul {
   display: flex;
+  justify-content: space-between;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 #nav-header ul li {
   display: inherit;
+  width: 50%;
+  justify-content: space-between; 
   justify-items: center;
   align-items: center;
-  padding: auto 2px;
+
 }
 
 #nav-header ul li a {
-  padding: 0.6rem;
+  display: block;
+  padding: auto;
   color: black;
   text-decoration: none;
   border-top: solid 2px transparent;
+}
+*/
+#nav-header {
+  width: 300px;
+}
+
+#nav-header ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#nav-header ul li {
+  display: inherit;
+  justify-content: center;
+  justify-items: space-between;
+  padding: auto 2px;
+  margin: auto;
+  width: 50%;
+}
+
+#nav-header ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 15px;
+  border-top: solid 2px transparent;
+  /*border-top: solid 2px var(--primary);*/
 }
 
 #nav-header ul li a:hover {
@@ -64,7 +98,7 @@ main {
 }
 
 #filter {
-  margin-top: 3vh;
+  margin-top: 1rem;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -72,14 +106,18 @@ main {
 
 #filter h3 {
   display: inline-block;
+  margin-right: 10px;
 }
 
-#filter nav{
+#filter nav {
   display: flex;
+  flex: row wrap;
+  gap: 1rem;
+  align-items: center;
 }
 
 #filter nav > a {
-  display: inline-flex;
+  display: flex;
   flex: row wrap;
   align-items: center;
   justify-content: space-evenly;
@@ -88,7 +126,7 @@ main {
   text-overflow: ellipsis;
   width: calc(165px + 0.0618vw);
   padding: 1rem 2rem;
-  margin: 0.5vh 0.4vw 1vh;
+  margin: auto;
   color: black;
   background-color: white;
   text-decoration: none;
@@ -207,7 +245,7 @@ main {
   display: flex;
   flex-flow: column wrap;
   justify-items: space-between;
-  flex-basis: 29%;
+  flex-basis: 30%;
   gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
   border-radius: var(--radius);
@@ -385,12 +423,9 @@ input[type="text"]::placeholder {
 /*  RESPONSIVE ==================================================== OC 2023 ===========*/
 /*========================================================== by Athena With Neah ======*/
 
-
-
 /* ====================================*/
 /* TABLET =============================*/
 /* ====================================*/
-
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #filter {
@@ -442,7 +477,6 @@ input[type="text"]::placeholder {
 /* MOBILE =============================*/
 /* ====================================*/
 
-
 @media screen and (max-width: 767px) {
   /* ==================================*/
   /* HEADER MOBILE ====================*/
@@ -468,19 +502,19 @@ input[type="text"]::placeholder {
   #nav-header ul li {
     display: inherit;
     justify-content: center;
-    justify-items: space-between; 
+    justify-items: space-between;
     padding: auto 2px;
     width: 50%;
     margin: auto;
   }
 
   #nav-header ul li a {
-    display:block;
+    display: block;
     width: 100%;
     text-align: center;
     border-top: none;
     border-bottom: solid 2px transparent;
-    }
+  }
 
   #nav-header ul li a:hover {
     border-top: none;
@@ -499,15 +533,20 @@ input[type="text"]::placeholder {
     align-items: start;
   }
 
-  #filter nav{
+  #filter nav {
+    display: flex;
     flex-wrap: wrap;
+    flex-basis: 50%;
+    justify-content: center;
   }
 
   #filter nav > a {
     align-content: baseline;
-    flex-basis: 2;
-    flex-shrink: 1;
-    margin-bottom: 10px;
+    /*flex-basis: 40%;*/
+    /*flex-shrink: 0;*/
+    text-size-adjust: calc(1rem * 0.4vw);
+    /*width: calc(200px);*/
+    /* margin-bottom: 10px;*/
   }
 
   .general-view {
@@ -591,7 +630,7 @@ input[type="text"]::placeholder {
     flex-basis: auto;
     min-width: 100%;
   }
-  
+
   .lateral > img {
     --img-lateral-ratio: 1/1;
     min-height: var(--img-lateral-ratio);
@@ -599,7 +638,7 @@ input[type="text"]::placeholder {
 
   .none {
     max-width: none;
-    
+
     width: 100%;
   }
 
