@@ -21,6 +21,7 @@ header {
 
 #logo {
   padding: 5px 5px 5px 0px;
+  margin: 10px;
 }
 
 #nav-header {
@@ -71,6 +72,10 @@ main {
 
 #filter h3 {
   display: inline-block;
+}
+
+#filter nav{
+  display: flex;
 }
 
 #filter nav > a {
@@ -137,7 +142,6 @@ main {
   align-items: baseline;
   justify-content: left;
   width: 100%;
-  max-height: 26px;
 }
 
 #hebergements > a {
@@ -194,8 +198,6 @@ main {
   gap: 2vw;
 }
 
-
-
 /*========================================================== 🥲 ======================*/
 /* CARD ==================================================== -  Not easy =============*/
 /*==================================================== No girl you have a good idea ==*/
@@ -204,7 +206,8 @@ main {
   --img-ratio: 16 / 9;
   display: flex;
   flex-flow: column wrap;
-  flex-basis: 30%;
+  justify-items: space-between;
+  flex-basis: 29%;
   gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
   border-radius: var(--radius);
@@ -250,11 +253,14 @@ main {
 
 .card-content h3 {
   margin: 5px 0px;
+  padding: 0px 10px 0px 0px;
+  height: auto;
 }
 
 .card-subtitle {
   padding: 0;
- }
+  margin: 0;
+}
 
 .none {
   width: 300px;
@@ -378,11 +384,15 @@ input[type="text"]::placeholder {
 /*=====================================================================================*/
 /*  RESPONSIVE ==================================================== OC 2023 ===========*/
 /*========================================================== by Athena With Neah ======*/
-/* Style pour tablettes */
-@media screen and (max-width: 1024px) {
-  header {
-   /* background-color: lightgreen;*/
-  }
+
+
+
+/* ====================================*/
+/* TABLET =============================*/
+/* ====================================*/
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   #filter {
     display: flex;
     flex-direction: column;
@@ -396,8 +406,8 @@ input[type="text"]::placeholder {
     justify-content: left;
     margin: 0px 0px 30px;
   }
-  
-   .general-view {
+
+  .general-view {
     display: inline;
   }
   .mobile-view {
@@ -410,14 +420,17 @@ input[type="text"]::placeholder {
 
   .pop-cards {
     flex-direction: row;
-    }
+  }
 
-
-.lateral{
-  min-width: 25%;
-  max-width: none;
-  width: fit-content;
-}
+  .lateral {
+    min-width: 25%;
+    max-width: none;
+    width: fit-content;
+  }
+  .lateral > img {
+    --img-lateral-ratio: calc (16/9 * 2, 618);
+    width: 40%;
+  }
 
   .none {
     flex-direction: none;
@@ -425,18 +438,24 @@ input[type="text"]::placeholder {
   }
 }
 
-/* Style pour téléphones mobiles */
-@media screen and (max-width: 480px) {
+/* ====================================*/
+/* MOBILE =============================*/
+/* ====================================*/
+
+
+@media screen and (max-width: 767px) {
   /* ==================================*/
   /* HEADER MOBILE ====================*/
   /* ==================================*/
 
   header {
-  /*  background-color: rgb(221, 221, 28);*/
     flex-direction: column;
+    max-width: none;
   }
   #logo {
-    margin: 10px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
   }
   #nav-header {
     width: 100%;
@@ -444,41 +463,49 @@ input[type="text"]::placeholder {
 
   #nav-header ul {
     width: 100%;
-    justify-items: stretch;
   }
 
   #nav-header ul li {
     display: inherit;
     justify-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-items: space-between; 
     padding: auto 2px;
+    width: 50%;
+    margin: auto;
   }
 
   #nav-header ul li a {
+    display:block;
+    width: 100%;
+    text-align: center;
     border-top: none;
     border-bottom: solid 2px transparent;
-  }
+    }
 
   #nav-header ul li a:hover {
     border-top: none;
     border-bottom: solid 2px var(--primary);
   }
 
-  #nav-header ul li {
-    width: 50%;
-    align-items: center;
-    justify-items: space-between;
-  }
-
   #filter-search {
     max-width: 95%;
     margin: auto;
+    align-content: center;
+  }
+  #filter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    align-items: start;
+  }
+
+  #filter nav{
+    flex-wrap: wrap;
   }
 
   #filter nav > a {
     align-content: baseline;
-    flex-basis: 40%;
+    flex-basis: 2;
     flex-shrink: 1;
     margin-bottom: 10px;
   }
@@ -541,14 +568,12 @@ input[type="text"]::placeholder {
   }
 
   #hebergements div {
-   flex-direction: column;
-   
+    flex-direction: column;
   }
-
 
   .pop-cards {
     flex-direction: column;
-    }
+  }
 
   #hebergements .card {
     max-width: none;
@@ -562,17 +587,23 @@ input[type="text"]::placeholder {
     gap: 4vw;
   }
 
-  .lateral{
+  .lateral {
     flex-basis: auto;
-    min-width:100% ;
+    min-width: 100%;
+  }
+  
+  .lateral > img {
+    --img-lateral-ratio: 1/1;
+    min-height: var(--img-lateral-ratio);
   }
 
   .none {
     max-width: none;
+    
     width: 100%;
   }
 
-  .none img {
+  .none > img {
     --img-none-ratio: 21/9;
   }
   /* ==================== FINAL DEBUG NEPHELIM ==============*/
