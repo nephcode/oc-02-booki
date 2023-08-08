@@ -1,5 +1,5 @@
 html {
-  background-color: aqua;
+  background-color: var(--second);
 }
 
 .main-container {
@@ -245,7 +245,7 @@ main {
   display: flex;
   flex-flow: column wrap;
   justify-items: space-between;
-  flex-basis: 30%;
+  flex-basis: 29%;
   gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
   border-radius: var(--radius);
@@ -529,7 +529,8 @@ input[type="text"]::placeholder {
   #filter {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin: 0px auto 30px;
+    max-width: 70%;
     align-items: start;
   }
 
