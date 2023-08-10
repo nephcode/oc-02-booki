@@ -4,56 +4,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500&display=swap");
 
 /*====================================================================================*/
-/* HOW TO KNOW NEPH ==================================================================*/
-/*========================================================== FOR THE TEAM by NEPHA ===*/
-/*
-Opérateur ' ' (espace) tous les élements indiqués dans la cible 
-Exemple : ```div p````
-
-Opérateur '>' (chevron) tous les enfants directs dans la cible
-Exemple : ```div > p```soit les enfants `p`de `div``
-
-Opérateur '+' (plus) uniquement l'élément suivant le premier
-Exemple : ```div + p``` Cible l'élément après le div et non dans le div
-
-Opérateur '~' (tilde option+n) Cible tous les suivants le premier
-Exemple : ```div ~ p``` Cibles tous les éléments après le div
-
-Opérateur '[]' (square bracket pour les humains) Cible l'élement avec l'attribut
-Exemple ```input[type="text"] tous les éléments contenant l'attribut cible
-
-Opérateur `*` (Joker) tous les éléments possible dans la règle
-Exemple : ```div + *```soit nimporte quel éléments à la suite de div 
-
-*/
-
-/*
-
-Flex -----------
-
-flex-shrink :  Valeur de retrecisement, initialisé par une valeur, 
-0 signifie 'fixed' 
-1 signifie 'rétrécie' et...
-
-flex-basis :  Largeur de l'élément 
-Exemple : flex-basis : 30vw; 300px... 
-1 signifie 'rétrécie' et...
-
-
-Source d'inspiration : 
-    https://smolcss.dev/#smol-css-grid
-    https://moderncss.dev/contextual-spacing-for-intrinsic-web-design/
-    
-
-*/
-
-/*====================================================================================*/
 /* VARIABLES =========================================================================*/
 /*====================================================================================*/
 :root {
   /* Variables */
   --primary: #0065fc;
   --second: #deebff;
+  --base: white;
 
   --background-primary: #d9d9d9;
   --background-second: #f2f2f2;
@@ -66,6 +23,8 @@ Source d'inspiration :
 /*====================================================================================*/
 /* RESPONSIVE ========================================================================*/
 /*====================================================================================*/
+
+/* not on B°_°ki */
 
 /*====================================================================================*/
 /* GLOBAL ============================================================================*/
@@ -81,6 +40,7 @@ Source d'inspiration :
 html,
 body {
   margin: 0;
+  background-color: var(--base);
 }
 
 h1 {
@@ -99,6 +59,10 @@ h1 {
   color: #f2f2f2;
 }
 
+.euro {
+  font-weight: bold;
+}
+
 a:link {
   color: var(--link);
 } /* Liens non visités */
@@ -106,8 +70,107 @@ a:visited {
   color: var(--link);
 } /* Liens visités */
 a:hover {
-  background: (var(--primary));
+  background:var(--primary);
 } /* Liens survolés */
 a:active {
   color: var(--primary);
 }
+
+.main-container {
+  background-color: white;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/*=============== B°_°kI =============================================================*/
+/* HEADER ===================================================== OC FULLSTACK =========*/
+/*====================================================================================*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
+  margin: auto;
+}
+
+#logo {
+  padding: 20px 5px 30px 0px;
+}
+
+#nav-header {
+  width: 300px;
+}
+
+#nav-header ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#nav-header ul li {
+  display: inherit;
+  justify-content: center;
+  /*justify-items: space-between;*/
+  padding: 2px;
+  margin: auto;
+  width: 50%;
+}
+
+#nav-header ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 15px;
+  border-top: solid 2px transparent;
+  /*border-top: solid 2px var(--primary);*/
+}
+
+#nav-header ul li a:hover {
+  color: var(--primary);
+  border-top: solid 2px var(--primary);
+}
+
+/*=============== B°_°kI =================== CICADA 3301 =============== A GAME ======*/
+/* FOOTER ===================================================== DID FULLSTACK ========*/
+/*====================================================================================*/
+
+footer {
+  display: flex;
+  width: 95%;
+  max-width: 95%;
+  margin: 3vh auto 0;
+  gap: 2vw;
+  background-color: var(--background-second);
+}
+footer nav {
+  width: 95%;
+  display: flex;
+  row-gap: 3vw;
+  justify-content:space-evenly;
+}
+
+footer nav > div {
+  width: 30%;
+}
+
+
+footer h3 {
+  margin-bottom: 0;
+}
+
+footer ul {
+  padding: 0;
+  align-items: center;
+  align-content: center;
+}
+footer ul li {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+footer a:link {
+    color: black;
+  }
+

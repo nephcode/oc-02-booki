@@ -1,93 +1,6 @@
-html {
-  background-color: var(--second);
-}
-
-.main-container {
-  background-color: white;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 /*=============== B°_°kI =============================================================*/
-/* HEADER ===================================================== OC FULLSTACK =========*/
+/* TEMPLATE > INDEX ========================================= OC FULLSTACK ===========*/
 /*====================================================================================*/
-
-header {
-  display: flex;
-  justify-content: space-between;
-  max-width: 95%;
-  margin: auto;
-}
-
-#logo {
-  padding: 20px 5px 30px 0px;
-}
-/*
-#nav-header {
-  width: 20vw;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: start;
-}
-
-#nav-header ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-#nav-header ul li {
-  display: inherit;
-  width: 50%;
-  justify-content: space-between; 
-  justify-items: center;
-  align-items: center;
-
-}
-
-#nav-header ul li a {
-  display: block;
-  padding: auto;
-  color: black;
-  text-decoration: none;
-  border-top: solid 2px transparent;
-}
-*/
-#nav-header {
-  width: 300px;
-}
-
-#nav-header ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-#nav-header ul li {
-  display: inherit;
-  justify-content: center;
-  justify-items: space-between;
-  padding: auto 2px;
-  margin: auto;
-  width: 50%;
-}
-
-#nav-header ul li a {
-  display: block;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  padding-top: 15px;
-  border-top: solid 2px transparent;
-  /*border-top: solid 2px var(--primary);*/
-}
-
-#nav-header ul li a:hover {
-  color: var(--primary);
-  border-top: solid 2px var(--primary);
-}
 
 /*=============== B°_°kI =============================================================*/
 /* MAIN ===================================================== OC FULLSTACK ===========*/
@@ -111,14 +24,16 @@ main {
 
 #filter nav {
   display: flex;
-  flex: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
 }
 
 #filter nav > a {
   display: flex;
-  flex: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   gap: 0.2rem;
@@ -231,7 +146,8 @@ main {
 
 #activites > div {
   display: flex;
-  flex: row nowrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 2vw;
 }
@@ -240,11 +156,12 @@ main {
 /* CARD ==================================================== -  Not easy =============*/
 /*==================================================== No girl you have a good idea ==*/
 .card {
+  background-color: var(--base);
   font-size: 0.8rem;
   --img-ratio: 16 / 9;
   display: flex;
   flex-flow: column wrap;
-  justify-items: space-between;
+  justify-content: space-between;
   flex-basis: 29%;
   gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
@@ -305,12 +222,7 @@ main {
   gap: 1rem;
   border-top-right-radius: var(--radius);
   border-top-left-radius: var(--radius);
-  /*flex-direction: row;*/
   justify-content: start;
-
-  /* text hack design girl */
-  /* That so cute 😜 */
-  /*white-space: nowrap;*/
   text-overflow: ellipsis;
   /*font-size: clamp(1vh, 4vh, 10vh);*/
 }
@@ -326,49 +238,8 @@ main {
 
 .none > h3 {
   font-size: calc(0.8rem + 0.0618vw);
-  /*font-size: calc(80% +1,618vw);*/
   margin-left: 10px;
   margin-top: 0;
-}
-
-/*=============== B°_°kI =================== CICADA 3301 =============== A GAME ======*/
-/* FOOTER ===================================================== DID FULLSTACK ========*/
-/*====================================================================================*/
-
-footer {
-  display: flex;
-  width: 95%;
-  max-width: 95%;
-  margin: 3vh auto 0;
-  gap: 2vw;
-  background-color: var(--background-second);
-}
-footer nav {
-  width: inherit;
-  display: flex;
-  flex-flow: row;
-  row-gap: 3vw;
-  justify-content: space-evenly;
-}
-
-footer h3 {
-  margin-bottom: 0;
-}
-
-footer ul {
-  padding: 0;
-  align-items: center;
-  align-content: center;
-}
-footer ul li {
-  list-style: none;
-  padding-bottom: 1rem;
-}
-
-footer a {
-  a:link {
-    color: black;
-  }
 }
 
 /*=====================================================================================*/
@@ -382,7 +253,6 @@ search {
 #search .fa-location-dot {
   color: black;
   box-sizing: content-box;
-  size: 20px;
   background-color: var(--background-second);
   border: 1px solid var(--background-second);
   border-top-left-radius: 15px;
@@ -421,7 +291,7 @@ input[type="text"]::placeholder {
 
 /*=====================================================================================*/
 /*  RESPONSIVE ==================================================== OC 2023 ===========*/
-/*========================================================== by Athena With Neah ======*/
+/*========================================================== Neah =====================*/
 
 /* ====================================*/
 /* TABLET =============================*/
@@ -463,13 +333,13 @@ input[type="text"]::placeholder {
     width: fit-content;
   }
   .lateral > img {
-    --img-lateral-ratio: calc (16/9 * 2, 618);
+    --img-lateral-ratio: calc(16 / 9 * 2.618);
     width: 40%;
   }
 
   .none {
-    flex-direction: none;
-    white-space: none;
+    flex-direction: unset;
+    white-space: normal;
   }
 }
 
@@ -502,8 +372,8 @@ input[type="text"]::placeholder {
   #nav-header ul li {
     display: inherit;
     justify-content: center;
-    justify-items: space-between;
-    padding: auto 2px;
+    /*justify-items: space-between;*/
+    padding: 2px;
     width: 50%;
     margin: auto;
   }
@@ -545,7 +415,8 @@ input[type="text"]::placeholder {
     align-content: baseline;
     /*flex-basis: 40%;*/
     /*flex-shrink: 0;*/
-    text-size-adjust: calc(1rem * 0.4vw);
+    font-size: calc(1rem * 0.0618); 
+    text-size-adjust: 50%;
     /*width: calc(200px);*/
     /* margin-bottom: 10px;*/
   }
@@ -590,7 +461,7 @@ input[type="text"]::placeholder {
   }
   #hebergements-and-populaires {
     flex-direction: column-reverse;
-    width: none;
+    width: auto;
   }
 
   #populaires {
@@ -660,10 +531,16 @@ input[type="text"]::placeholder {
     flex-direction: column;
   }
 
+  footer nav div {
+    width: auto;
+    margin-right: 3rem;
+  }
+
   footer li {
     padding-bottom: 1rem;
   }
+
+  /* ========================================================*/
+  /* ========================================================*/
+  /* =================================2023 OC Review #2======*/
 }
-/* ==================== FINAL DEBUG NEPHELIM ==============*/
-/* Ce code est claqué au sol tellement c'est le bazar =====*/
-/* ====================================== CSS en PLS ======*/
