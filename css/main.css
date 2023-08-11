@@ -65,9 +65,12 @@ h1 {
   font-weight: bold;
 }
 
-.infobulle::before {
-  content: "&nbsp;";
-  background-image: url('/images/i-icon.svg')
+
+.infobulle {
+  display: inline-block;
+  vertical-align: text-bottom;
+  align-items: baseline;
+  padding-right: 10px;
 }
 
 a:link {

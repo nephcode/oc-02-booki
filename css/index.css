@@ -15,13 +15,6 @@ main > p {
   align-items: center;
 }
 
-main p > img {
-  display: inline-block;
-  vertical-align: text-bottom;
-  align-items: baseline;
-  padding-right: 10px;
-}
-
 #filter {
   margin-top: 1rem;
   display: flex;
@@ -106,7 +99,7 @@ main p > img {
   width: 100%;
 }
 
-#hebergements > a {
+.plusplus {
   display: block;
   align-self: start;
   color: black;
@@ -122,6 +115,7 @@ main p > img {
   row-gap: 2vh;
   min-width: 420px;
   flex-shrink: 0;
+  gap: 30px;
 }
 
 .pop-cards {
@@ -164,14 +158,20 @@ main p > img {
 /*========================================================== 🥲 ======================*/
 /* CARD ==================================================== -  Not easy =============*/
 /*==================================================== No girl you have a good idea ==*/
-.card {
+.card{
+  display: flex;
+  flex-basis: 28%;
+}
+
+.card > a {
   background-color: var(--base);
-  font-size: 0.8rem;
-  --img-ratio: 16 / 9;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
-  flex-basis: 28%;
+  font-size: 0.8rem;
+  --img-ratio: 16 / 9;
+
+
   gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
   border-radius: var(--radius);
@@ -199,14 +199,14 @@ main p > img {
 }
 
 
-.lateral {
+.lateral > a {
   /* that's really cool css */
   flex-basis: 100%;
   width: auto;
   flex-flow: row nowrap;
 }
 
-.lateral > img {
+.lateral img {
   /* var img neph */
   --img-lateral-ratio: 123 / 144;
   /* rules lateral */
@@ -248,7 +248,7 @@ main p > img {
   /*font-size: clamp(1vh, 4vh, 10vh);*/
 }
 
-.none > img {
+.none img {
   --img-none-ratio: 4 / 5;
   aspect-ratio: var(--img-none-ratio);
   object-fit: cover;
@@ -257,7 +257,7 @@ main p > img {
   padding: 0rem;
 }
 
-.none > h3 {
+.none h3 {
   font-size: calc(0.8rem + 0.0618vw);
   margin-left: 10px;
   margin-top: 0;
@@ -358,7 +358,7 @@ input[type="text"]::placeholder {
     max-width: none;
     width: fit-content;
   }
-  .lateral > img {
+  .lateral img {
     --img-lateral-ratio: calc(16 / 9 * 2.618);
     width: 40%;
   }
@@ -552,7 +552,7 @@ input[type="text"]::placeholder {
     order: 5;
   }
   /*------- Merchandising Update ------END-*/
-   #activites > div {
+   #activites div {
     flex-direction: column;
     max-width: none;
     gap: 4vw;
@@ -563,7 +563,7 @@ input[type="text"]::placeholder {
     min-width: 100%;
   }
 
-  .lateral > img {
+  .lateral img {
     --img-lateral-ratio: 1/1;
     min-height: var(--img-lateral-ratio);
   }
@@ -574,7 +574,7 @@ input[type="text"]::placeholder {
     width: 100%;
   }
 
-  .none > img {
+  .none img {
     --img-none-ratio: 21/9;
   }
   /* ==================== FINAL DEBUG NEPHELIM ==============*/
