@@ -31,23 +31,22 @@ I'm not Joking now, I'am so Tired to fix the code. Please follow the Debug part 
 ## Debug Responsive
 
 ### Global Css
-- Class euro : bold
-- Main Background : White
-- Use var not #hex color
+- Class euro : bold > **FIX**
+- Main Background : White > **FIX**
+- Use var not #hex color > **FIX**
 
 # Search and Filter
-- Search optimize search button without hack responsive
-- Fix Adaptative
+- Search optimize search button without display none
+- Fix Adaptative > **FIX**
+- Vertical Align infobubble with text **FIX**
 
 ### Card
-
 - Hover Click Zone (WTF !!! really you read the doc 4 times !!!!)
-- Card : Change the background-color to white
-- Fix the hosting wrap over 1440px, i think it's a `vh` bug 
+- Card : Change the background-color to white **FIX**
+- Fix the hosting wrap over 1440px > **FIX**
 
 ### Footer
-
-- Fix space between and align:start
+- Fix space between and align:start > **FIX**
 
 
 ```

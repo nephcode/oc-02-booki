@@ -11,6 +11,8 @@
   --primary: #0065fc;
   --second: #deebff;
   --base: white;
+  --base-light: white;
+  --base-dark:black; 
 
   --background-primary: #d9d9d9;
   --background-second: #f2f2f2;
@@ -24,7 +26,7 @@
 /* RESPONSIVE ========================================================================*/
 /*====================================================================================*/
 
-/* not on B°_°ki */
+/* not on B°_°ki >>__ One Page system 
 
 /*====================================================================================*/
 /* GLOBAL ============================================================================*/
@@ -63,12 +65,18 @@ h1 {
   font-weight: bold;
 }
 
+.infobulle::before {
+  content: "&nbsp;";
+  background-image: url('/images/i-icon.svg')
+}
+
 a:link {
   color: var(--link);
 } /* Liens non visités */
 a:visited {
   color: var(--link);
 } /* Liens visités */
+/*
 a:hover {
   background:var(--primary);
 } /* Liens survolés */
@@ -111,8 +119,7 @@ header {
 #nav-header ul li {
   display: inherit;
   justify-content: center;
-  /*justify-items: space-between;*/
-  padding: 2px;
+  
   margin: auto;
   width: 50%;
 }
@@ -120,6 +127,7 @@ header {
 #nav-header ul li a {
   display: block;
   width: 100%;
+  align-items: center;
   text-align: center;
   text-decoration: none;
   padding-top: 15px;

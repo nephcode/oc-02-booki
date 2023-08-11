@@ -10,6 +10,18 @@ main {
   margin: auto;
 }
 
+main > p {
+  display: flex;
+  align-items: center;
+}
+
+main p > img {
+  display: inline-block;
+  vertical-align: text-bottom;
+  align-items: baseline;
+  padding-right: 10px;
+}
+
 #filter {
   margin-top: 1rem;
   display: flex;
@@ -33,17 +45,15 @@ main {
 #filter nav > a {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 0.2rem;
+  justify-content: space-around;
+  gap: 0.3rem;
   white-space: nowrap;
-  text-overflow: ellipsis;
-  width: calc(165px + 0.0618vw);
+  width: calc(20% - 0.1618vw);
   padding: 1rem 2rem;
-  margin: auto;
   color: black;
-  background-color: white;
+  background-color: var(--base);
   text-decoration: none;
   border-color: #f2f2f2;
   border-radius: 30px;
@@ -73,7 +83,6 @@ main {
   background-color: var(--background-second);
   border-radius: 20px;
   padding: 20px;
-  /*gap: 2vw;*/
 }
 
 /* -------------------------------------------------*/
@@ -141,7 +150,7 @@ main {
   flex-direction: column;
   width: 95%;
   padding: 20px;
-  margin-top: 2rem;
+  /*margin-top: 2rem;*/
 }
 
 #activites > div {
@@ -161,8 +170,8 @@ main {
   --img-ratio: 16 / 9;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
-  flex-basis: 29%;
+  justify-content: flex-start;
+  flex-basis: 28%;
   gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
   border-radius: var(--radius);
@@ -246,8 +255,13 @@ main {
 /* FORMS ========================================================== OC 2023 ===========*/
 /*===================================================================== by Nepha ======*/
 search {
+  display: inline-flex;
   margin: 1rch auto;
   max-height: 42px;
+}
+
+#search form {
+  display: inline-flex;
 }
 
 #search .fa-location-dot {
@@ -260,9 +274,9 @@ search {
   padding: 12px 15px 12px;
 }
 
-button {
+#search button {
   background-color: var(--primary);
-  color: white;
+  color: var(--base);
   max-height: 42px;
   font-weight: bold;
   font-size: 1rem;
@@ -284,7 +298,7 @@ input[type="text"] {
 }
 
 input[type="text"]::placeholder {
-  color: black;
+  color: var(--link);
   font-weight: bold;
   font-size: 1rem;
 }
@@ -370,20 +384,15 @@ input[type="text"]::placeholder {
   }
 
   #nav-header ul li {
-    display: inherit;
-    justify-content: center;
-    /*justify-items: space-between;*/
-    padding: 2px;
-    width: 50%;
     margin: auto;
+    align-content: first baseline;
   }
 
   #nav-header ul li a {
-    display: block;
-    width: 100%;
-    text-align: center;
     border-top: none;
     border-bottom: solid 2px transparent;
+    padding-top: unset;
+    padding-bottom: 10px;
   }
 
   #nav-header ul li a:hover {
@@ -400,23 +409,38 @@ input[type="text"]::placeholder {
     display: flex;
     flex-direction: column;
     margin: 0px auto 30px;
-    max-width: 70%;
+    max-width: 100%;
     align-items: start;
   }
 
   #filter nav {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+
+    /* FLEX 
     display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: auto;
     flex-basis: 50%;
-    justify-content: center;
+    justify-content: flex-start;
+    */
   }
 
   #filter nav > a {
+    width: 150px;
+    min-width: 130px;
+    justify-content: flex-start;
     align-content: baseline;
-    /*flex-basis: 40%;*/
-    /*flex-shrink: 0;*/
-    font-size: calc(1rem * 0.0618); 
-    text-size-adjust: 50%;
+    flex-basis: 45%;
+    padding: 1rem 0.5rem;
+    font-size: calc(1.1rem * 0.1618px);
+    flex-shrink: 1;
+
+    /*text-size-adjust: 50%;*/
     /*width: calc(200px);*/
     /* margin-bottom: 10px;*/
   }
@@ -458,7 +482,9 @@ input[type="text"]::placeholder {
   main > p {
     max-width: 95%;
     margin: 5px 5px 10px;
+    align-items: flex-start;
   }
+
   #hebergements-and-populaires {
     flex-direction: column-reverse;
     width: auto;
@@ -474,6 +500,7 @@ input[type="text"]::placeholder {
   #hebergements {
     background-color: white;
   }
+
   #hebergements > * {
     gap: 5vw;
   }
@@ -492,12 +519,33 @@ input[type="text"]::placeholder {
     width: 100%;
   }
 
-  #activites > div {
+  /*------- Merchandising Update ---------*/
+  #hebergements .card:nth-child(1) {
+    order: 1;
+  }
+  #hebergements .card:nth-child(2) {
+    order: 6;
+  }
+  #hebergements .card:nth-child(3) {
+    order: 3;
+  }
+  #hebergements .card:nth-child(4) {
+    order: 4;
+  }
+
+  #hebergements .card:nth-child(5) {
+    order: 2;
+  }
+  #hebergements .card:nth-child(6) {
+    order: 5;
+  }
+  /*------- Merchandising Update ------END-*/
+  */ #activites > div {
     flex-direction: column;
     max-width: none;
     gap: 4vw;
   }
-
+  
   .lateral {
     flex-basis: auto;
     min-width: 100%;
@@ -540,7 +588,25 @@ input[type="text"]::placeholder {
     padding-bottom: 1rem;
   }
 
+  /* =================================  WE ARE ONE ==========*/
+  /* === HACK FOR GALAXY FLIP5 ==============================*/
+  /* ================================ 2023 OC Review #2 =====*/
+
+  @media screen and (max-width: 319px) {
+    /* ==================================*/
+    /* HEADER MOBILE ====================*/
+    /* ==================================*/
+
+    #filter nav {
+      display: flex;
+    }
+    #filter nav a {
+      width: 100%;
+      flex: none;
+    }
+  }
+
+  /* ================================================= 3301 =*/
   /* ========================================================*/
-  /* ========================================================*/
-  /* =================================2023 OC Review #2======*/
+  /* ================================ 2023 OC Review #2 =====*/
 }
