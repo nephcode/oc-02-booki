@@ -178,7 +178,18 @@ main p > img {
   /*max-width: 200px;*/
 }
 
-.card > img {
+.card a {
+ border: 0px;
+ text-decoration: none;
+}
+
+.card a:visited {
+  border: 0px;
+  color: transparent;
+ }
+
+
+.card img {
   aspect-ratio: var(--img-ratio);
   object-fit: cover;
   width: 100%;
@@ -186,6 +197,7 @@ main p > img {
   border-top-left-radius: var(--radius);
   padding: 0.2rem;
 }
+
 
 .lateral {
   /* that's really cool css */
@@ -515,7 +527,7 @@ input[type="text"]::placeholder {
 
   #hebergements .card {
     max-width: none;
-    gap: 5vw;
+    /*gap: 5vw;*/
     width: 100%;
   }
 
@@ -540,7 +552,7 @@ input[type="text"]::placeholder {
     order: 5;
   }
   /*------- Merchandising Update ------END-*/
-  */ #activites > div {
+   #activites > div {
     flex-direction: column;
     max-width: none;
     gap: 4vw;

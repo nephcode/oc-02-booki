@@ -26,32 +26,39 @@ I'm not Joking now, I'am so Tired to fix the code. Please follow the Debug part 
 | FIREFOX            | **NO**    | Firefox Developer Edition > Bug over                                                       |
 | RESPONSIVE DESKTOP | **OK**    | Over 1024 with margin at 1280 PX                                                           |
 | RESPONSIVE TABLET  | **OK**    | Between 1024 to 768 in PX width                                                            |
-| RESPONSIVE MOBILE  | **NO**    | Under 767 to 320 in PX ---> FIX FILTER COLUMN WRAP                                         |
+| RESPONSIVE MOBILE  | **YES**   | Under 767 to 320 in PX ---> **FIX** FLEX to GRIP to FLEX under 320px                       |
+| RESPONSIVE EXTREME | **YES**   | Yes optimized column and gap for 2560px and 320px                                          |
 
 ## Debug Responsive
 
 ### Global Css
+
 - Class euro : bold > **FIX**
 - Main Background : White > **FIX**
 - Use var not #hex color > **FIX**
 
-# Search and Filter
+### Search and Filter
+
 - Search optimize search button without display none
-- Fix Adaptative > **FIX**
-- Vertical Align infobubble with text **FIX**
+- Fix Adaptative > **FIX** (Grid to flex)
+- Vertical Align infobubble with text > **FIX**
 
 ### Card
+
 - Hover Click Zone (WTF !!! really you read the doc 4 times !!!!)
-- Card : Change the background-color to white **FIX**
+- Card : Change the background-color to white > **FIX**
 - Fix the hosting wrap over 1440px > **FIX**
+- Merchandising Hosting Order on Mobile > **FIX**
 
 ### Footer
-- Fix space between and align:start > **FIX**
 
+- Fix space between and align:start > **FIX**
 
 ```
 
-DO IT, NO EXCUSE 
+- DO IT, NO EXCUSE
+  - Please open tickets to fix the bugs 😛 that a KANBAN[G]
+
 
 ```
 
@@ -59,7 +66,7 @@ DO IT, NO EXCUSE
 
 The is a cool simulation with classic issues (**adaptative strange behaviors**). I thinked the projet for a future component implementation. I use 2 sheet style `MAIN` and `TEMPLATE`.
 
-I tried to use the minimal code in CSS and i keep my HTML code safe from *DIV invasion*
+I tried to use the minimal code in CSS and i keep my HTML code safe from _DIV invasion_
 I used #ID and Cascade Class.
 I choised Cascade on card to optimize behavoir for responsive and adaptative.
 Here, the main `.card` and others cascade top change the ratio img system `.lateral` and `.none`.
