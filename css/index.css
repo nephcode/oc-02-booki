@@ -35,6 +35,10 @@ main > p {
   align-items: center;
 }
 
+#filter .fa-person{
+  font-size: x-large;
+}
+
 #filter nav > a {
   display: flex;
   flex-direction: row;
@@ -89,7 +93,7 @@ main > p {
   justify-content: space-between;
   flex-flow: row wrap;
   flex-grow: 1;
-  gap: 2vw;
+  gap: 30px;
 }
 
 #hebergements h2 {
@@ -121,7 +125,7 @@ main > p {
 .pop-cards {
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 2vh;
 }
 
 .populaires-title {
@@ -144,7 +148,6 @@ main > p {
   flex-direction: column;
   width: 95%;
   padding: 20px;
-  /*margin-top: 2rem;*/
 }
 
 #activites > div {
@@ -152,7 +155,7 @@ main > p {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: 2vw;
+  gap: 2.5vw;
 }
 
 /*========================================================== 🥲 ======================*/
@@ -160,7 +163,7 @@ main > p {
 /*==================================================== No girl you have a good idea ==*/
 .card{
   display: flex;
-  flex-basis: 28%;
+  flex-basis: 29%;
 }
 
 .card > a {
@@ -175,7 +178,6 @@ main > p {
   gap: 0.1rem;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.25);
   border-radius: var(--radius);
-  /*max-width: 200px;*/
 }
 
 .card a {
@@ -260,20 +262,16 @@ main > p {
 .none h3 {
   font-size: calc(0.8rem + 0.0618vw);
   margin-left: 10px;
-  margin-top: 0;
+  margin-top: 5px;
 }
 
 /*=====================================================================================*/
 /* FORMS ========================================================== OC 2023 ===========*/
 /*===================================================================== by Nepha ======*/
-search {
-  display: inline-flex;
-  margin: 1rch auto;
-  max-height: 42px;
-}
 
 #search form {
   display: inline-flex;
+  min-width: unset;
 }
 
 #search .fa-location-dot {
@@ -289,7 +287,7 @@ search {
 #search button {
   background-color: var(--primary);
   color: var(--base);
-  max-height: 42px;
+  max-height: 50px;
   font-weight: bold;
   font-size: 1rem;
   padding: 11px 10px;
@@ -297,20 +295,26 @@ search {
   border-bottom-right-radius: 15px;
   border: 0px;
 }
-.mobile-view {
-  display: none;
+
+#search button::after {
+content: "Recherche";
+font-weight: bold;
+font-size: 1rem;
 }
 
 input[type="text"] {
-  max-height: 42px;
+  width: 100%;
   border: none;
   border-bottom: 1px solid var(--background-second);
   border-top: 1px solid var(--background-second);
   padding: 10px; /* That's great hack girl */
+  color: var(--base-dark);
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 input[type="text"]::placeholder {
-  color: var(--link);
+  color: var(--base-dark);
   font-weight: bold;
   font-size: 1rem;
 }
@@ -351,6 +355,7 @@ input[type="text"]::placeholder {
 
   .pop-cards {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .lateral {
@@ -359,8 +364,9 @@ input[type="text"]::placeholder {
     width: fit-content;
   }
   .lateral img {
-    --img-lateral-ratio: calc(16 / 9 * 2.618);
+    --img-lateral-ratio: 9 / 16 ;
     width: 40%;
+    max-height: 150px;
   }
 
   .none {
@@ -382,11 +388,13 @@ input[type="text"]::placeholder {
     flex-direction: column;
     max-width: none;
   }
+
   #logo {
     display: flex;
     margin: auto;
     justify-content: center;
   }
+
   #nav-header {
     width: 100%;
   }
@@ -417,6 +425,7 @@ input[type="text"]::placeholder {
     margin: auto;
     align-content: center;
   }
+
   #filter {
     display: flex;
     flex-direction: column;
@@ -429,17 +438,8 @@ input[type="text"]::placeholder {
     width: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2vw;
     justify-content: space-between;
-
-    /* FLEX 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: auto;
-    flex-basis: 50%;
-    justify-content: flex-start;
-    */
   }
 
   #filter nav > a {
@@ -449,12 +449,8 @@ input[type="text"]::placeholder {
     align-content: baseline;
     flex-basis: 45%;
     padding: 1rem 0.5rem;
-    font-size: calc(1.1rem * 0.1618px);
+    font-size: 1.1rem;
     flex-shrink: 1;
-
-    /*text-size-adjust: 50%;*/
-    /*width: calc(200px);*/
-    /* margin-bottom: 10px;*/
   }
 
   .general-view {
@@ -464,13 +460,18 @@ input[type="text"]::placeholder {
     display: inline;
   }
 
-  button {
+  #search button::after{
+  content: "\f002"; 
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900;
+  margin-right: 0px; 
+  }
+
+  #search button {
     color: white;
-    max-height: 42px;
-    width: 42px;
     font-weight: bold;
     font-size: 1rem;
-    padding: 11px 10px;
+    padding: 11px 13px;
     border-radius: 15px;
     border: 0px;
     margin-left: -20px;
@@ -479,7 +480,6 @@ input[type="text"]::placeholder {
   .fa-magnifying-glass {
     color: white;
     box-sizing: content-box;
-    /*border: 2px solid var(--background-second);*/
     border-radius: 15px;
   }
 
@@ -599,7 +599,7 @@ input[type="text"]::placeholder {
   footer li {
     padding-bottom: 1rem;
   }
-
+  }  
   /* =================================  WE ARE ONE ==========*/
   /* === HACK FOR GALAXY FLIP5 ==============================*/
   /* ================================ 2023 OC Review #2 =====*/
@@ -616,9 +616,9 @@ input[type="text"]::placeholder {
       width: 100%;
       flex: none;
     }
-  }
+  }  
 
   /* ================================================= 3301 =*/
   /* ========================================================*/
   /* ================================ 2023 OC Review #2 =====*/
-}
+
