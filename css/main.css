@@ -183,5 +183,6 @@ footer ul li {
 
 footer a:link {
     color: black;
+    text-decoration: none;
   }
 
