@@ -1,4 +1,4 @@
-![FooterNephcodePublic](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/public/oc-react/readme-header-oc--react-02.png)
+![cover](https://kpkfzczpavanzocxzyta.supabase.co/storage/v1/object/pulic/oc-react/readme-header-oc-react-02.png)
 
 # Booki
 
